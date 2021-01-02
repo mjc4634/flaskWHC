@@ -34,6 +34,10 @@ stock_df_adj_close = stock_df['Adj Close']
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return "<h1>Hello Azure!</h1>"
+
 
 @app.route('/stocks_data')
 def get_stock_data():

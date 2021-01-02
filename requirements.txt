@@ -13,7 +13,7 @@ lxml==4.6.2
 numpy==1.19.4
 pandas==1.2.0
 pandas-datareader==0.9.0
-pyportfolioopt==1.2.7
+#pyportfolioopt==1.2.7
 python-dateutil==2.8.1
 python-dotenv==0.15.0
 pytz==2020.5
