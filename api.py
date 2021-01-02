@@ -5,7 +5,7 @@ from datetime import datetime
 import json
 import pandas as pd
 
-from pypfopt import expected_returns
+# from pypfopt import expected_returns
 
 from utils import getTopTwoPrincipleComponents
 
@@ -63,14 +63,14 @@ def get_top_two_principle_components():
 
 
 # find expected returns
-@app.route('/expected_returns')
-def get_expected_returns():
-    exp_returns = expected_returns.capm_return(stock_df_adj_close)
-    exp_df = pd.DataFrame(exp_returns.index)
-    exp_df['Expected Returns'] = [round(exp_r*100, 2) for exp_r in exp_returns.values]
-    exp_df_json = exp_df.to_json(orient='index')
-    exp_df_parsed = json.loads(exp_df_json)
-    return exp_df_parsed
+# @app.route('/expected_returns')
+# def get_expected_returns():
+#     exp_returns = expected_returns.capm_return(stock_df_adj_close)
+#     exp_df = pd.DataFrame(exp_returns.index)
+#     exp_df['Expected Returns'] = [round(exp_r*100, 2) for exp_r in exp_returns.values]
+#     exp_df_json = exp_df.to_json(orient='index')
+#     exp_df_parsed = json.loads(exp_df_json)
+#     return exp_df_parsed
 
 
 
